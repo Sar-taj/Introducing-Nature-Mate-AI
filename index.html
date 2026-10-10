@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#173d2c">
+  <title>NatureMate AI | Touch Grass</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="#">🌿 NatureMate<span> AI</span></a>
+    <span class="tag">LESS SCREEN. MORE GREEN.</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">YOUR PERSONAL NATURE COMPANION</p>
+      <h1>It's a beautiful day<br>to <span>touch grass.</span></h1>
+      <p class="intro">
+        Step away from the screen. Discover something new
+        outside with your own AI-powered nature companion.
+      </p>
+      <a href="#planner" class="primary-link">Plan my adventure ↓</a>
+    </section>
+
+    <section class="planner" id="planner">
+      <div class="section-heading">
+        <p class="eyebrow">YOUR NEXT ADVENTURE</p>
+        <h2>What are you in the mood for?</h2>
+        <p>Tell your AI what you enjoy. It will create an outdoor mission.</p>
+      </div>
+
+      <form id="planForm">
+        <label for="interest">I want to explore</label>
+        <select id="interest">
+          <option value="birds and wildlife">Birds and wildlife</option>
+          <option value="plants and gardening">Plants and gardening</option>
+          <option value="walking and hiking">Walking and hiking</option>
+          <option value="clouds and the sky">Clouds and the sky</option>
+          <option value="mindfulness in nature">Mindfulness in nature</option>
+          <option value="nature photography">Nature photography</option>
+        </select>
+
+        <label for="duration">Time available</label>
+        <select id="duration">
+          <option value="10 minutes">10 minutes</option>
+          <option value="20 minutes" selected>20 minutes</option>
+          <option value="30 minutes">30 minutes</option>
+          <option value="60 minutes">1 hour</option>
+        </select>
+
+        <label for="location">Where will you explore? (optional)</label>
+        <input id="location" type="text"
+          placeholder="e.g. my garden, local park">
+
+        <button type="submit" id="generateBtn">
+          ✨ Generate my nature mission
+        </button>
+      </form>
+
+      <div id="status" class="status" role="status" aria-live="polite">
+        Your next adventure is waiting.
+      </div>
+
+      <article id="result" class="result" hidden>
+        <p class="eyebrow">YOUR PERSONAL NATURE MISSION</p>
+        <h3 id="resultTitle"></h3>
+        <div id="resultBody" class="result-body"></div>
+        <button id="completeBtn" class="complete-btn" type="button">
+          ✓ I completed my mission
+        </button>
+      </article>
+    </section>
+
+    <section class="progress">
+      <p class="eyebrow">SMALL STEPS, BIG DISCOVERIES</p>
+      <h2>Your outdoor journey</h2>
+      <div class="stats">
+        <div class="stat-card">
+          <span id="missionCount">0</span>
+          <p>Missions completed</p>
+        </div>
+        <div class="stat-card">
+          <span id="minuteCount">0</span>
+          <p>Minutes outdoors</p>
+        </div>
+      </div>
+      <p class="privacy-note">
+        Your progress is saved in this browser, not in an account.
+      </p>
+    </section>
+
+    <section class="reminder">
+      <p>“The best part of your day might be waiting outside.”</p>
+      <span>Close the tab. Open the world.</span>
+    </section>
+  </main>
+
+  <footer>
+    <p>NatureMate AI · Built for the Touch Grass challenge 🌱</p>
+    <p>AI suggestions are for exploration, not a substitute for local safety advice.</p>
+  </footer>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,322 @@
+
+:root {
+  --forest: #173d2c;
+  --green: #2f704a;
+  --mint: #eaf3e8;
+  --cream: #faf9f3;
+  --text: #23352a;
+  --muted: #68776c;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 8%;
+  background: white;
+  border-bottom: 1px solid #e7ece4;
+}
+
+.brand {
+  color: var(--forest);
+  text-decoration: none;
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.brand span {
+  color: var(--green);
+}
+
+.tag,
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--green);
+}
+
+.tag {
+  letter-spacing: 1px;
+}
+
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 24px;
+}
+
+.hero {
+  text-align: center;
+  padding: 90px 0 80px;
+}
+
+.hero h1 {
+  font-size: clamp(2.7rem, 7vw, 5rem);
+  line-height: 1.08;
+  letter-spacing: -2px;
+  margin: 18px 0;
+  color: var(--forest);
+}
+
+.hero h1 span {
+  color: var(--green);
+}
+
+.intro {
+  max-width: 540px;
+  margin: 0 auto 28px;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.primary-link {
+  display: inline-block;
+  background: var(--forest);
+  color: white;
+  text-decoration: none;
+  padding: 13px 24px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.primary-link:hover,
+button:hover {
+  filter: brightness(1.1);
+}
+
+.planner {
+  background: white;
+  padding: 38px;
+  border: 1px solid #e5eae1;
+  border-radius: 22px;
+  box-shadow: 0 12px 35px #173d2c0b;
+}
+
+.section-heading {
+  margin-bottom: 25px;
+}
+
+h2 {
+  color: var(--forest);
+  font-size: clamp(1.6rem, 4vw, 2.1rem);
+  line-height: 1.25;
+  margin: 8px 0;
+}
+
+.section-heading > p:last-child {
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+form {
+  display: grid;
+  gap: 10px;
+}
+
+label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-top: 9px;
+}
+
+input,
+select {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px;
+  border: 1px solid #d9e2d8;
+  border-radius: 9px;
+  background: #fff;
+  color: var(--text);
+  font: inherit;
+}
+
+input:focus,
+select:focus,
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #9dc8a7;
+  outline-offset: 3px;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+#generateBtn {
+  background: var(--green);
+  color: white;
+  padding: 14px;
+  border: 0;
+  border-radius: 10px;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+#generateBtn:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.status {
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.result {
+  margin-top: 22px;
+  background: var(--mint);
+  border-radius: 15px;
+  padding: 24px;
+}
+
+.result h3 {
+  color: var(--forest);
+  font-size: 1.5rem;
+  margin: 8px 0 15px;
+}
+
+.result-body p {
+  margin: 10px 0;
+}
+
+.result-body ul {
+  padding-left: 22px;
+  margin: 8px 0;
+}
+
+.complete-btn {
+  margin-top: 18px;
+  padding: 11px 17px;
+  background: var(--forest);
+  color: white;
+  border: 0;
+  border-radius: 9px;
+}
+
+.complete-btn:disabled {
+  background: #607a68;
+  cursor: default;
+}
+
+.progress {
+  text-align: center;
+  padding: 75px 0;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 25px;
+}
+
+.stat-card {
+  padding: 25px;
+  background: white;
+  border: 1px solid #e5eae1;
+  border-radius: 15px;
+}
+
+.stat-card span {
+  font-size: 2.3rem;
+  color: var(--green);
+  font-weight: 800;
+}
+
+.stat-card p,
+.privacy-note {
+  color: var(--muted);
+}
+
+.privacy-note {
+  margin-top: 15px;
+  font-size: 0.85rem;
+}
+
+.reminder {
+  text-align: center;
+  padding: 38px 20px;
+  background: var(--mint);
+  border-radius: 18px;
+  margin-bottom: 50px;
+}
+
+.reminder p {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--forest);
+}
+
+.reminder span {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+footer {
+  text-align: center;
+  background: var(--forest);
+  color: white;
+  padding: 25px 20px;
+  font-size: 0.82rem;
+}
+
+footer p + p {
+  margin-top: 5px;
+  opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 18px 5%;
+  }
+
+  .tag {
+    font-size: 0.6rem;
+    text-align: right;
+  }
+
+  main {
+    padding: 0 15px;
+  }
+
+  .hero {
+    padding: 65px 0;
+  }
+
+  .hero h1 {
+    letter-spacing: -1px;
+  }
+
+  .planner {
+    padding: 22px;
+  }
+
+  .stats {
+    gap: 10px;
+  }
+
+  .stat-card {
+    padding: 18px 10px;
+  }
+}
